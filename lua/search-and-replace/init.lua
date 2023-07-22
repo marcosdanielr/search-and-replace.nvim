@@ -31,5 +31,5 @@ local function start()
 end
 
 return {
-  start = start
+  setup = start
 }
