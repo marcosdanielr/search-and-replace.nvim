@@ -1,7 +1,6 @@
 local words_to_table = require 'search-and-replace.utils.words_to_table'
 local run_command = require 'search-and-replace.utils.run_command'
 
-
 local function search_and_replace_each_one(args)
   local args_to_table = words_to_table(args)
   local word = args_to_table[1]
