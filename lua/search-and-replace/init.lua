@@ -18,10 +18,10 @@ local function search_and_replace_all(args)
 end
 
 local function setup_commands()
-  run_command('SearchAndReplaceAll', function(data) search_and_replace_all(data.args) end, {
+  run_command('SRA', function(data) search_and_replace_all(data.args) end, {
     nargs = "*"
   })
-  run_command('SearchAndReplaceAllEachOne', function(data) search_and_replace_each_one(data.args) end, {
+  run_command('SRE', function(data) search_and_replace_each_one(data.args) end, {
     nargs = "*"
   })
 end
@@ -30,4 +30,6 @@ local function start()
   setup_commands()
 end
 
-return start
+return {
+  start = start
+}
